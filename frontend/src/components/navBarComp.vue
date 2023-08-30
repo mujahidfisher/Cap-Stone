@@ -36,6 +36,9 @@
             <li class="nav-item">
               <router-link to="/contact" class="nav-link">Contact Me</router-link>
             </li>
+            <li>
+                <button><img src="" alt="login">LogIn/SignUp</button>
+            </li>
           </ul>
         </div>
       </div>
