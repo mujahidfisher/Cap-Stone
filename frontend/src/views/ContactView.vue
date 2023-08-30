@@ -1,13 +1,16 @@
 <template>
     <div>
-        <h1>Contact Page</h1>
-
+        <h1>Contact Me</h1>
+        <contactFormComp />
     </div>
 </template>
 
 <script>
+import contactFormComp from '@/components/contactFormComp.vue';
     export default {
-        
+        components: {
+            contactFormComp,
+        }
     }
 </script>
 
