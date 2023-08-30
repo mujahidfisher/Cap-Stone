@@ -1,7 +1,7 @@
 <template>
   <div>
     <div class="footer">
-      <div class="top-container-fluid">
+      <div class="container-fluid">
         <div class="row">
             <div class="col">
                 <p>Community</p>
@@ -18,7 +18,7 @@
         </div>
       </div>
       <hr>
-      <div class="bottom-container-fluid">
+      <div class="container-fluid">
         <div class="row">
             <div class="col">
                 <p>CopyRight &copy; MujahidFisher</p>
