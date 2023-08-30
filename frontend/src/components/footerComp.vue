@@ -17,6 +17,7 @@
             </div>
         </div>
       </div>
+      <hr>
       <div class="bottom-container-fluid">
         <div class="row">
             <div class="col">
