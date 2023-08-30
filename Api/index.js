@@ -28,7 +28,6 @@ app.use(
 );
 
 routes.get("^/$|/Cap_Stone", (req, res) => {
-  console.log("Welcome Back");
   res.sendFile(path.resolve(__dirname, "./static/HTML/index.html"));
 });
 

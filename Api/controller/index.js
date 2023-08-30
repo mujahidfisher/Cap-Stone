@@ -1,7 +1,7 @@
 const express = require("express");
 const bodyParser = require("body-parser");
 const routes = express.Router();
-const { verifyAToken } = require("../middleware/AuthenticateUsers");
+const { verifyAToken } = require("../middleware/AuthenticateUser");
 const { users, merch } = require("../model");
 
 routes.get("/users", (req, res) => {
