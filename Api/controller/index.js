@@ -10,7 +10,7 @@ routes.get("/users", (req, res) => {
 routes.get("/user/:id", (req, res) => {
   users.fetchUsers(req, res);
 });
-routes.post("/user", bodyParser.json(), (req, res) => {
+routes.post("/registerU", bodyParser.json(), (req, res) => {
   users.register(req, res);
 });
 routes.put("/user/:id", bodyParser.json(), (req, res) => {
