@@ -37,7 +37,7 @@
               <router-link to="/contact" class="nav-link">Contact Me</router-link>
             </li>
             <li>
-                <button><img src="" alt="login">LogIn/SignUp</button>
+                <router-link to="/logIn"><button><img src="" alt="login">LogIn</button></router-link>
             </li>
           </ul>
         </div>

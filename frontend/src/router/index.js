@@ -31,6 +31,16 @@ const routes = [
     path: '/contact',
     name: 'contact',
     component: () => import('../views/ContactView.vue')
+  },
+  {
+    path: '/signUp',
+    name: 'signUp',
+    component: () => import('../views/SignUpView.vue')
+  },
+  {
+    path: '/logIn',
+    name: 'logIn',
+    component: () => import('../views/LogInView.vue')
   }
 ]
 

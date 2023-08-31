@@ -1,5 +1,6 @@
 <template>
   <div>
+    <navBarComp />
     <section1HomeComp />
     <section2HomeComp />
     <section3HomeComp />
@@ -9,6 +10,7 @@
 </template>
 
 <script>
+import navBarComp from '../components/navBarComp.vue';
 import section1HomeComp from '@/components/section1HomeComp.vue';
 import section2HomeComp from '../components/section2HomeComp.vue';
 import section3HomeComp from '../components/section3HomeComp.vue';
@@ -20,7 +22,8 @@ import galleryCarouselComp from '../components/galleryCarouselComp.vue'
       section2HomeComp,
       section3HomeComp,
       trendingAnimeComp,
-      galleryCarouselComp
+      galleryCarouselComp,
+      navBarComp,
     }
     
   }
