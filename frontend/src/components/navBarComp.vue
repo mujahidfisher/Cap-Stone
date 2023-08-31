@@ -1,10 +1,10 @@
 <template>
   <div>
-    <nav class="navbar navbar-expand-lg bg-body-tertiary">
+    <nav class="navbar sticky-top navbar-expand-lg bg-body-tertiary">
       <div class="container-fluid nav">
         <a class="navbar-brand" href="#">
           <img class="logo" src="https://i.postimg.cc/c4y2MkJw/d9260ceb4bccd08286f7ee416f4075a3-removebg-preview.png" alt="Logo" loading="lazy"
-        /></a>
+        />SenpaiOracle</a>
         <button
           class="navbar-toggler"
           type="button"
@@ -48,7 +48,7 @@
 
 <script>
 export default {
-    
+  
 };
 </script>
 
