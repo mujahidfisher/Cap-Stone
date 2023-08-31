@@ -41,6 +41,17 @@ const routes = [
     path: '/logIn',
     name: 'logIn',
     component: () => import('../views/LogInView.vue')
+  },
+  {
+    path: '/single',
+    name: 'single',
+    component: () => import('../views/SingleItemView.vue')
+  },
+  {
+    path: '/cart',
+    name: 'cart',
+    props: true,
+    component: () => import('../views/cartView.vue')
   }
 ]
 

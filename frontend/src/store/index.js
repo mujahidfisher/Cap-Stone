@@ -1,7 +1,6 @@
-import { createStore } from 'vuex'
+import { createStore } from "vuex";
 import axios from "axios";
-const Api = ""
-
+const Api = "https://cap-stone-api.onrender.com/";
 
 export default createStore({
   state: {
@@ -13,10 +12,8 @@ export default createStore({
     token: null,
     msg: null,
     postData: null,
-
   },
-  getters: {
-  },
+  getters: {},
   mutations: {
     setUsers(state, users) {
       state.users = users;
@@ -48,10 +45,16 @@ export default createStore({
     SortPrice(state) {
       state.merchs.sort((a, b) => a.price - b.price);
     },
-
   },
   actions: {
+    async fetchMerchs(context) {
+      try {
+        const { data } = await axios.get(`${Api}merch`);
+        context.commit("setMerchs", data.results);
+      } catch (e) {
+        context.commit("setMsg", "An Error has occured😢");
+      }
+    },
   },
-  modules: {
-  }
-})
+  modules: {},
+});
