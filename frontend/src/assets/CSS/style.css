@@ -10,6 +10,69 @@
   -webkit-font-smoothing: antialiased;
 }
 
+*::-webkit-scrollbar {
+  display: none;
+}
+
+.logo {
+  width: 5rem;
+  background-color: rgba(108, 70, 78, 0.426);
+  border: 2px rgb(123, 224, 173) solid;
+}
+
+.bg-body-tertiary {
+  background-color: rgb(169, 253, 172) !important;
+  padding: 10px;
+}
+
+.nav-link {
+  color: rgb(68, 207, 108);
+  text-shadow: 1px 1px 2px;
+  text-align: center;
+  transition: all 0.3s ease-in-out;
+  margin: 5px !important;
+}
+
+.nav-link:hover {
+  background-color: rgba(108, 70, 78, 0.815);
+  color: rgb(241, 255, 231);
+  border-radius: 20px;
+  transform: scale(1.1);
+}
+
 nav a.router-link-exact-active {
-  color: #42b983;
+  color: rgb(241, 255, 231) !important;
+  text-shadow: 2px 2px 3px rgb(108, 70, 78);
+  text-align: center;
+  transition: all 0.3s ease-in-out;
+}
+
+.navbar-toggler:hover {
+  color: rgb(108, 70, 78);
+  background-color: rgb(241, 255, 231);
+  transition: 200ms;
+}
+
+.log-btn {
+  background-color: rgb(108, 70, 78);
+  color: rgb(123, 224, 173);
+  border-radius: 20px;
+  transition: all 0.3s ease-in-out;
+}
+
+.log-btn:hover {
+  transform: scale(1.2);
+  transition: 200ms;
+}
+
+@media only screen and (width < 989px) {
+  .nav-link:hover {
+    border-radius: 0;
+    width: 100%;
+  }
+
+  .bg-body-tertiary {
+    overflow-x: hidden;
+  }
+
 }
