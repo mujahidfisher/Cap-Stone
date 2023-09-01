@@ -286,8 +286,6 @@ nav a.router-link-exact-active {
   }
 }
 
-
-
 @media only screen and (width < 650px) {
   #app {
     background-image: url("https://i.postimg.cc/Dzr7zy1S/57fd02f833f0c5b906f5032b0f2314dc.jpg");
@@ -297,12 +295,11 @@ nav a.router-link-exact-active {
   }
 }
 
-
 @media only screen and (width < 583px) {
   .textHome {
     margin-top: 5vh !important;
   }
-  
+
   .itachi {
     width: 18rem;
     height: 40vh;
@@ -338,7 +335,6 @@ nav a.router-link-exact-active {
     background-attachment: fixed;
     background-size: 100% 100%;
   }
-
 }
 @media only screen and (width < 583px) {
   .explore-btn:focus {
