@@ -2,8 +2,8 @@
   <div>
     <div class="container-fluid">
         <h4>Merchandise:</h4>
+        <button>Add Item</button>
         <table class="table table-striped">
-          <button>Add Item</button>
         <thead>
           <tr>
             <th scope="col">Merch ID</th>
@@ -15,15 +15,15 @@
             <th scope="col">Edit or Delete</th>
           </tr>
         </thead>
-        <tbody v-for="merchs in merchs" :key="merchs.merchID">
+        <tbody v-for="merch in merchs" :key="merch.merchID">
           <tr>
-            <td>{{ merchs.merchID }}</td>
-            <td>{{ merchs.merchName }}</td>
-            <td>3</td>
-            <td>4</td>
-            <td>5</td>
-            <td>6</td>
-            <td><button>Edit</button> <button>Delete</button></td>
+            <td>{{ merch.merchID }}</td>
+            <td>{{ merch.merchName }}</td>
+            <td>{{ merch.quantity }}</td>
+            <td><img class="adminImg" :src="merch.merchImg" alt="img"></td>
+            <td>{{ merch.tag }}</td>
+            <td>{{ merch.price }}</td>
+            <td><button>Edit</button> <button @click="confirmDeleteM(merch.merchID)">Delete</button></td>
           </tr>
         </tbody>
       </table>
@@ -33,6 +33,17 @@
 
 <script>
 export default {
+  methods: {
+    confirmDeleteM(merchID) {
+      if(confirm("Please confirm.")) {
+        try {
+          this.$store.dispatch("deleteMerch", merchID)
+        }catch(e) {
+          console.log("Error deleting item!");
+        }
+      }
+    }
+  },  
   computed: {
     merchs() {
       return this.$store.state.merchs

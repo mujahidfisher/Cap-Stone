@@ -24,7 +24,7 @@ export default createStore({
     setMerchs(state, merchs) {
       state.merchs = merchs;
     },
-    setmerch(state, merch) {
+    setMerch(state, merch) {
       state.merch = merch;
     },
     setSpinner(state, value) {
@@ -49,10 +49,20 @@ export default createStore({
   actions: {
     async fetchMerchs(context) {
       try {
-        const { data } = await axios.get(`${Api}merch`);
+        const { data } = await axios.get(`${Api}merchs`);
         context.commit("setMerchs", data.results);
       } catch (e) {
         context.commit("setMsg", "An Error has occured😢");
+      }
+    },
+    async deleteMerch(context, merchID) {
+      try {
+        const { data } = await axios.delete(`${Api}merch/${merchID}`);
+        if(data.msg) {
+          context.dispatch("fetchMerchs")
+        }
+      }catch(e) {
+        context.commit("setMsg", "An error occurred.")
       }
     },
   },

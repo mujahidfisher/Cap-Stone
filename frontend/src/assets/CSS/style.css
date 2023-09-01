@@ -349,4 +349,6 @@ nav a.router-link-exact-active {
   }
 }
 
-
+.adminImg {
+  width: 7rem;
+}
