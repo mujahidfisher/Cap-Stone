@@ -3,6 +3,7 @@
     <div class="container-fluid">
         <h4>Merchandise:</h4>
         <button>Add Item</button>
+        <div class="table-responsive-xxl">
         <table class="table table-striped">
         <thead>
           <tr>
@@ -27,6 +28,7 @@
           </tr>
         </tbody>
       </table>
+    </div>
     </div>
   </div>
 </template>
