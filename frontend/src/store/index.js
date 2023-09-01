@@ -58,11 +58,29 @@ export default createStore({
     async deleteMerch(context, merchID) {
       try {
         const { data } = await axios.delete(`${Api}merch/${merchID}`);
-        if(data.msg) {
-          context.dispatch("fetchMerchs")
+        if (data.msg) {
+          context.dispatch("fetchMerchs");
         }
-      }catch(e) {
-        context.commit("setMsg", "An error occurred.")
+      } catch (e) {
+        context.commit("setMsg", "An error occurred.");
+      }
+    },
+    async fetchUsers(context) {
+      try {
+        const { data } = await axios.get(`${Api}users`);
+        context.commit("setUsers", data.results);
+      } catch (e) {
+        context.commit("setMsg", "An Error has occured😒");
+      }
+    },
+    async deleteUser(context, userID) {
+      try {
+        const { data } = await axios.delete(`${Api}user/${userID}`);
+        if (data.msg) {
+          context.dispatch("fetchUsers");
+        }
+      } catch (e) {
+        context.commit("setMsg", "An error occurred.");
       }
     },
   },
