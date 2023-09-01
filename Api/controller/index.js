@@ -28,7 +28,7 @@ routes.post("/login", bodyParser.json(), (req, res) => {
 
 /////////////////////////////////////
 
-routes.get("/merch", (req, res) => {
+routes.get("/merchs", (req, res) => {
   merch.fetchMerchs(req, res);
 });
 routes.get("/merch/:id", (req, res) => {
