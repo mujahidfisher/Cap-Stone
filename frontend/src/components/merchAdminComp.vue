@@ -15,10 +15,10 @@
             <th scope="col">Edit or Delete</th>
           </tr>
         </thead>
-        <tbody>
+        <tbody v-for="merchs in merchs" :key="merchs.merchID">
           <tr>
-            <td>1</td>
-            <td>2</td>
+            <td>{{ merchs.merchID }}</td>
+            <td>{{ merchs.merchName }}</td>
             <td>3</td>
             <td>4</td>
             <td>5</td>
@@ -32,7 +32,16 @@
 </template>
 
 <script>
-export default {};
+export default {
+  computed: {
+    merchs() {
+      return this.$store.state.merchs
+    }
+  },
+  mounted() {
+    this.$store.dispatch("fetchMerchs")
+  }
+};
 </script>
 
 <style scoped></style>
