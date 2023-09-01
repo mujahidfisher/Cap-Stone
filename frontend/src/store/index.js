@@ -83,6 +83,15 @@ export default createStore({
         context.commit("setMsg", "An error occurred.");
       }
     },
+    async ConfirmAddMerch( { commit }, merchAdd) {
+      try {
+        const res = await axios.post(`${Api}registerM`, merchAdd)
+        commit("setPostData", res.data)
+        console.log(res.data);
+      }catch(e) {
+        console.log("nothing much");
+      }
+    }
   },
   modules: {},
 });
