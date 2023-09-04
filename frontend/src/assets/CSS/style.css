@@ -338,7 +338,14 @@ nav a.router-link-exact-active {
   }
 }
 @media only screen and (width < 320px) {
-  .merchI-1, .merchI-2, .merchI-3, .merchI-4, .merchI-5, .merchI-6, .merchI-7, .merchI-8 {
+  .merchI-1,
+  .merchI-2,
+  .merchI-3,
+  .merchI-4,
+  .merchI-5,
+  .merchI-6,
+  .merchI-7,
+  .merchI-8 {
     width: 16rem !important;
   }
 }
@@ -363,7 +370,14 @@ nav a.router-link-exact-active {
   align-items: center;
 }
 
-.merchI-1, .merchI-2, .merchI-3, .merchI-4, .merchI-5, .merchI-6, .merchI-7, .merchI-8 {
+.merchI-1,
+.merchI-2,
+.merchI-3,
+.merchI-4,
+.merchI-5,
+.merchI-6,
+.merchI-7,
+.merchI-8 {
   margin: 5px;
   width: 20rem;
   border: 2px black solid;
@@ -425,7 +439,6 @@ nav a.router-link-exact-active {
   transform: translateX(-0.02em);
 }
 
-
 @media only screen and (width < 964px) {
   .feat-header-top {
     margin-bottom: -15px;
@@ -454,4 +467,58 @@ nav a.router-link-exact-active {
 
 .view:hover {
   background-image: linear-gradient(to right, #373737, black);
+}
+
+.animeLog {
+  width: 15rem;
+}
+
+.animelogos {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+}
+
+.trends {
+  margin-top: 5rem;
+  margin-bottom: 5rem;
+  color: #ffffff;
+  text-align: center;
+  font-weight: 700;
+  top: 50%;
+  left: 50%;
+  text-shadow: 2px 2px 5px #ffffff, 6px 6px 5px #373737, 10px 10px 5px #a89a00;
+}
+
+.galler {
+  text-align: center;
+  font-weight: 700;
+  -webkit-text-fill-color: #a89a00;
+  margin-top: 10rem;
+}
+
+.carousel-item {
+  margin-bottom: 10rem;
+  border: #101010 2px solid;
+  width: 18rem;
+  height: 18rem;
+}
+
+.carousel {
+  margin: auto;
+  display: flex;
+  justify-content: center;
+  width: 18rem;
+  height: 20rem;
+}
+
+.cara {
+  display: flex;
+  flex-wrap: wrap;
+  margin-bottom: 10rem;
+}
+
+.text-cara {
+  text-align: center;
+  background-image: linear-gradient(to right, #373737, #a89a00);
 }
