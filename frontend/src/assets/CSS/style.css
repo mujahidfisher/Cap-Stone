@@ -348,3 +348,38 @@ nav a.router-link-exact-active {
 .adminImg {
   width: 7rem;
 }
+
+.box-gallery {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.merchI-1, .merchI-2, .merchI-3, .merchI-4, .merchI-5, .merchI-6, .merchI-7, .merchI-8 {
+  margin: 5px;
+  width: 20rem;
+  border: 2px black solid;
+}
+
+.disco-btn {
+  margin: 30px;
+  display: flex;
+  justify-content: center;
+}
+
+.disco {
+  width: 85px;
+  height: 50px;
+  border-radius: 10px;
+  box-shadow: #a89a00 0px 10px;
+  transition: 500ms;
+}
+
+.disco:hover {
+  margin-top: 10px;
+  box-shadow: 0px 0px black;
+  border: #a89a00 2px solid;
+  transition: 200ms;
+}
