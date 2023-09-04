@@ -6,6 +6,8 @@ import store from "./store";
 import "bootstrap";
 import "bootstrap/dist/css/bootstrap.min.css";
 import css from "./assets/CSS/style.css";
+import 'slick-carousel/slick/slick-theme.css';
+import 'slick-carousel/slick/slick.css';
 
 createApp(App)
 .use(store)
