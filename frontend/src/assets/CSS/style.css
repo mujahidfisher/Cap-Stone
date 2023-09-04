@@ -33,7 +33,7 @@
 }
 
 .bg-body-tertiary {
-  background-color: #101010 !important;
+  background-image: linear-gradient(to right, black, #373737) !important;
   padding: 10px;
 }
 
@@ -43,7 +43,8 @@
   text-align: center;
   transition: all 0.3s ease-in-out;
   margin: 5px !important;
-  border: 2px #101010 solid;
+  border: 2px #373737 ridge;
+  border-radius: 10px;
 }
 
 .nav-link:hover {
@@ -336,6 +337,11 @@ nav a.router-link-exact-active {
     background-size: 100% 100%;
   }
 }
+@media only screen and (width < 320px) {
+  .merchI-1, .merchI-2, .merchI-3, .merchI-4, .merchI-5, .merchI-6, .merchI-7, .merchI-8 {
+    width: 16rem !important;
+  }
+}
 @media only screen and (width < 583px) {
   .explore-btn:focus {
     margin-top: 0;
@@ -382,4 +388,70 @@ nav a.router-link-exact-active {
   box-shadow: 0px 0px black;
   border: #a89a00 2px solid;
   transition: 200ms;
+}
+
+.feat-text {
+  color: #ffffff;
+  text-shadow: #ffffff 1px 1px 5px;
+  text-align: center;
+}
+
+.wrapper {
+  display: grid;
+  place-content: center;
+  font-size: clamp(1.5rem, 1rem + 18vw, 15rem);
+  font-weight: 700;
+  text-transform: uppercase;
+  color: #ffffff;
+}
+
+.wrapper > div {
+  grid-area: 1/1/-1/-1;
+}
+
+.feat-header-top {
+  clip-path: polygon(0% 0%, 100% 0%, 100% 48%, 0% 58%);
+  margin-bottom: -20px;
+}
+
+.feat-header-bottom {
+  margin-top: -17px;
+  clip-path: polygon(0% 60%, 100% 50%, 100% 100%, 0% 100%);
+  color: transparent;
+  background: -webkit-linear-gradient(177deg, #a89a00 53%, #a89a00 65%);
+  background: linear-gradient(177deg, #a89a00 53%, #a89a00 65%);
+  background-clip: text;
+  -webkit-background-clip: text;
+  transform: translateX(-0.02em);
+}
+
+
+@media only screen and (width < 964px) {
+  .feat-header-top {
+    margin-bottom: -15px;
+  }
+  .feat-header-bottom {
+    margin-top: -15px;
+  }
+}
+
+.card-img-top {
+  padding: 20px;
+}
+
+.card {
+  background-image: linear-gradient(to right, #373737, #a89a00);
+  color: #ffffff;
+}
+
+.view {
+  background-image: linear-gradient(to right, black, #373737);
+  color: #ffffff;
+  border-radius: 20px;
+  width: 6rem;
+  height: 2rem;
+}
+
+.view:hover {
+  background-image: linear-gradient(to right, #373737, black);
 }
