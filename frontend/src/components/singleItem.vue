@@ -8,7 +8,7 @@
           :src="$route.query.img"
           class="card-img-top"
           :alt="$route.query.img"
-          style="width: 18rem"
+          style="width: 18rem" loading="lazy"
         />
       </div>
       <p class="card-text">

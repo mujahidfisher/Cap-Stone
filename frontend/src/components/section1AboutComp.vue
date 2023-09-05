@@ -1,13 +1,13 @@
 <template>
   <div class="about-page1">
-      <img class="storyPic2" src="https://i.postimg.cc/QxF65zJ2/youtube-banner-yoma-by-yomadesigns-daqipcj-pre.jpg" alt="about-Img2">
+      <img class="storyPic2" src="https://i.postimg.cc/QxF65zJ2/youtube-banner-yoma-by-yomadesigns-daqipcj-pre.jpg" alt="about-Img2" loading="lazy">
     <div class="container-fluid">
       <div class="about-item">
         <img
           class="stoypic"
           src="https://i.postimg.cc/gkG1DyGH/dfs.gif"
           alt="about-Img1"
-        />
+        loading="lazy"/>
         <div class="text-box">
           <div class="side-words">
             <h6>My Story:</h6>

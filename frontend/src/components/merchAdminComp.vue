@@ -71,7 +71,7 @@
               <td>{{ merch.merchID }}</td>
               <td>{{ merch.merchName }}</td>
               <td>{{ merch.quantity }}</td>
-              <td><img class="adminImg" :src="merch.merchImg" alt="img" /></td>
+              <td><img class="adminImg" :src="merch.merchImg" alt="img" loading="lazy"/></td>
               <td>{{ merch.tag }}</td>
               <td>{{ merch.price }}</td>
               <td>

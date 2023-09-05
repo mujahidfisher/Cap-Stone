@@ -21,6 +21,19 @@
   display: none;
 }
 
+a {
+  text-decoration: none;
+}
+
+a:focus {
+  text-decoration: none;
+  cursor: progress;
+}
+
+button:focus {
+  cursor: progress;
+}
+
 .logo {
   width: 5rem;
   background-color: #101010;
@@ -600,6 +613,11 @@ nav a.router-link-exact-active {
     margin-left: 20rem;
     margin-right: 20px;
   }
+
+  .rights {
+    margin-left: 2rem !important;
+  }
+  
 }
 
 @media only screen and (width < 590px) {
@@ -725,4 +743,83 @@ nav a.router-link-exact-active {
   outline-color: #373737;
   outline-offset: 10px;
   text-shadow: #a89a00;
+}
+
+.comunity {
+  margin-left: 20px;
+}
+
+.commu {
+  color: #ffffff8f;
+}
+
+.links {
+  cursor: pointer;
+}
+
+.logo-foot {
+  width: 6rem;
+  height: 4rem;
+  margin-left: 13rem;
+}
+
+@media only screen and (width < 1000px) {
+  .rights {
+    margin-left: 5rem !important;
+  }
+  
+}
+
+@media only screen and (width < 1239px) {
+  .resident {
+    margin-right: 2rem;
+  }
+}
+
+@media only screen and (width < 444px) {
+  .logo-foot {
+    margin: auto;
+  }
+  .resident {
+    margin-left: -3rem;
+  }
+}
+
+.rights {
+  margin-left: 10rem;
+}
+
+@media only screen and (width < 379px) {
+  .resident {
+    margin-left: 3rem !important;
+  }
+}
+
+.resident {
+  color: #ffffff8f;
+  margin-left: 20rem;
+}
+
+
+.icons {
+  width: 3rem;
+  padding: 10px;
+  margin: 10px;
+  transform: scale(1.15);
+  animation: pulse 2s infinite;
+  transition: 200ms;
+}
+
+@keyframes pulse {
+  0% {
+    transform: scale(0.9);
+  }
+
+  70% {
+    transform: scale(1.15);
+  }
+
+  100% {
+    transform: scale(0.9);
+  }
 }

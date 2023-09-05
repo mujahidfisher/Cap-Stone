@@ -16,7 +16,7 @@
         style="width: 18rem"
         :key="merch.merchID"
       >
-        <img :src="merch.merchImg" class="card-img-top" alt="merchImg" />
+        <img :src="merch.merchImg" class="card-img-top" alt="merchImg" loading="lazy"/>
         <div class="card-body text-center">
           <h5 class="card-header">{{ merch.merchName }}</h5>
           <p class="card-header">{{ merch.tag }}</p>

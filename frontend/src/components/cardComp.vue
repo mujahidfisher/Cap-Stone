@@ -1,7 +1,7 @@
 <template>
   <div class="container-fluid">
     <div class="card" v-for="merch in merchs" style="width: 18rem" :key="merch.merchID">
-      <img :src="merch.merchImg" class="card-img-top" alt="merchImg" />
+      <img :src="merch.merchImg" class="card-img-top" alt="merchImg" loading="lazy"/>
       <div class="card-body">
         <h5 class="card-title">{{ merch.merchName }}</h5>
         <p class="card-text">{{ merch.tag }}</p>
