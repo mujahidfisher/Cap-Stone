@@ -823,3 +823,64 @@ nav a.router-link-exact-active {
     transform: scale(0.9);
   }
 }
+
+.form {
+  display: flex;
+  padding: 15px;
+  justify-content: center;
+  flex-direction: column;
+  margin: auto;
+  width: 18rem;
+  margin-bottom: 70px;
+}
+
+.form-control {
+  margin: 9px;
+  border: 2px #a89a00 solid;
+  text-align: left;
+  box-shadow: 10px 10px 2px #101010;
+  transition: 500ms;
+}
+
+.btn:focus {
+  cursor: progress;
+}
+
+.title-1 {
+  margin: 20px;
+  display: flex;
+  justify-content: center;
+  color: #a89a00;
+  text-shadow: #101010 2px 3px 1px;
+}
+
+.btn {
+  box-shadow: 0px 0px 20px #a89a00;
+  outline: 2px solid;
+  outline-color: #a89a00;
+  transition: 500ms;
+}
+
+.btn:hover {
+  box-shadow: 0px 0px 20px #a89a00, 0 0 20px #ffffff;
+  outline-color: #373737;
+  outline-offset: 10px;
+  text-shadow: #a89a00;
+}
+
+.btn {
+  margin: 20px;
+  margin-left: 80px;
+  margin-right: 80px;
+  box-shadow: 10px 10px 2px #101010;
+}
+
+input:required:invalid:focus {
+  border-color: #ff0000;
+  background-color: #ab27278e;
+}
+
+textarea:required:invalid:focus {
+  border-color: #ff0000;
+  background-color: #ab27278e;
+}

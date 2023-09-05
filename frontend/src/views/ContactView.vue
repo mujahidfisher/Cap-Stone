@@ -1,7 +1,7 @@
 <template>
     <div>
         <navBarComp />
-        <h1>Contact Me</h1>
+        <h1 class="title-1">Contact Me</h1>
         <contactFormComp />
     </div>
 </template>
