@@ -1,6 +1,10 @@
 <template>
   <div class="section2">
-
+    <center>
+      <div class="headingh">
+        <h2 class="offer">What we Offer:</h2>
+      </div>
+    </center>
     <div class="box-gallery">
       <div class="box">
         <img class="merchI-1" src="https://i.postimg.cc/fLHjFCns/TSM587-ZCRU-1.jpg" alt="pic2">
