@@ -10,7 +10,7 @@
                     </div>
                 </div>
                 <div class="col">
-                    <img class="itachi" src="https://i.postimg.cc/PrxGvPf9/14018.gif" alt="homeImg">
+                    <img class="itachi" src="https://i.postimg.cc/PrxGvPf9/14018.gif" alt="homeImg" loading="lazy">
                 </div>
             </div>
         </div>
