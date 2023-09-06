@@ -872,12 +872,10 @@ nav a.router-link-exact-active {
 }
 
 input:required:invalid:focus {
-  border-color: #ff0000;
   background-color: #ab27278e;
 }
 
 textarea:required:invalid:focus {
-  border-color: #ff0000;
   background-color: #ab27278e;
 }
 
@@ -913,7 +911,7 @@ textarea:required:invalid:focus {
   border: hidden;
   padding: 10px;
   text-align: center;
-  margin-left: 5rem;
+  margin-left: 6rem;
 }
 
 .btn-submit:hover {
@@ -934,10 +932,71 @@ textarea:required:invalid:focus {
   transition: 500ms;
 }
 
+.form-control-log {
+  margin-top: 10px;
+  margin-left: 15px;
+  margin-bottom: 10px;
+  border: 2px #a89a00 solid;
+  text-align: left;
+  border-radius: 20px;
+  padding: 8px;
+  transition: 500ms;
+}
+
 .sign-page {
+  height: 100vh;
+}
+
+.log-page {
   height: 100vh;
 }
 
 .main-box {
   margin-top: 80px;
+}
+
+.main-box-log {
+  margin-top: 10rem;
+}
+
+.btn-submit-log {
+  display: block;
+  width: 200px;
+  height: 40px;
+  font-size: 18px;
+  margin-top: 20px;
+  margin-bottom: 5px;
+  color: #373737;
+  border: 2px solid #373737;
+  text-align: center;
+  position: relative;
+  border-radius: 20px;
+  transition: all .35s;
+  margin-left: 2rem;
+}
+
+.btn-submit-log span{
+  position: relative;
+  z-index: 2;
+}
+
+.btn-submit-log:after{
+  position: absolute;
+  content: "";
+  top: 0;
+  left: 0;
+  width: 0;
+  height: 100%;
+  background: #a89a00;
+  transition: all 0.5s;
+}
+
+.btn-submit-log:hover{
+  color: #ffffff;
+  border-radius: 20px;
+}
+
+.btn-submit-log:hover:after{
+  width: 100%;
+  border-radius: 20px;
 }

@@ -1,6 +1,6 @@
 <template>
-    <div>
-        <h1>LogIn</h1>
+    <div class="log-page">
+        <h1 class="title-2">LogIn</h1>
         <logInComp />
     </div>
 </template>
