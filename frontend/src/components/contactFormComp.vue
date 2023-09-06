@@ -46,7 +46,7 @@
           oninput="setCustomValidity('')"
         ></textarea>
   
-        <button class="btn btn-outline-warning" type="submit">SUBMIT</button>
+        <button class="btn btn-outline-warning" style="margin-top: 20px" type="submit">SUBMIT</button>
       </div>
     </form>
   </div>
