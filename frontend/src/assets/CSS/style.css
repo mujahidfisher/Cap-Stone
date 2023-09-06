@@ -859,6 +859,9 @@ nav a.router-link-exact-active {
   outline: 2px solid;
   outline-color: #a89a00;
   transition: 500ms;
+  margin-left: 80px;
+  margin-right: 80px;
+  box-shadow: 10px 10px 2px #101010;
 }
 
 .btn:hover {
@@ -866,13 +869,6 @@ nav a.router-link-exact-active {
   outline-color: #373737;
   outline-offset: 10px;
   text-shadow: #a89a00;
-}
-
-.btn {
-  margin: 20px;
-  margin-left: 80px;
-  margin-right: 80px;
-  box-shadow: 10px 10px 2px #101010;
 }
 
 input:required:invalid:focus {
@@ -883,4 +879,65 @@ input:required:invalid:focus {
 textarea:required:invalid:focus {
   border-color: #ff0000;
   background-color: #ab27278e;
+}
+
+.signup-page {
+  display: flex;
+  padding: 15px;
+  justify-content: center;
+  flex-direction: column;
+  margin: auto;
+  width: 18rem;
+  margin-bottom: 70px;
+}
+
+.btn:focus {
+  cursor: progress;
+}
+
+.title-2 {
+  display: flex;
+  justify-content: center;
+  color: #a89a00;
+  text-shadow: #101010 2px 3px 1px;
+  padding: 20px;
+}
+
+.btn-submit {
+  box-shadow: 0px 0px 20px #a89a00;
+  outline: 2px solid;
+  outline-color: #a89a00;
+  transition: 500ms;
+  margin-top: 20px;
+  border-radius: 20px;
+  border: hidden;
+  padding: 10px;
+  text-align: center;
+  margin-left: 5rem;
+}
+
+.btn-submit:hover {
+  box-shadow: 0px 0px 20px #a89a00, 0 0 20px #ffffff;
+  outline-color: #373737;
+  outline-offset: 10px;
+  text-shadow: #a89a00;
+}
+
+.form-control-sign {
+  margin-top: 10px;
+  margin-left: 15px;
+  margin-bottom: 10px;
+  border: 2px #a89a00 solid;
+  text-align: left;
+  border-radius: 20px;
+  padding: 8px;
+  transition: 500ms;
+}
+
+.sign-page {
+  height: 100vh;
+}
+
+.main-box {
+  margin-top: 80px;
 }

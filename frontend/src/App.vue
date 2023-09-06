@@ -1,7 +1,7 @@
 <template>
   <div>
     <router-view />
-    <footerCompVue />
+
   </div>
 </template>
 
