@@ -91,6 +91,33 @@ export default createStore({
       }catch(e) {
         console.log("nothing much");
       }
+    },
+    async ConfirmAddUser( { commit }, userAdd) {
+      try {
+        const res = await axios.post(`${Api}registerU`, userAdd)
+        commit("setPostData", res.data)
+        console.log(res.data);
+      }catch(e) {
+        console.log("nothing much");
+      }
+    },
+    async ConfirmEditMerch(context, edmerch) {
+      try {
+        const res = await axios.patch(`${Api}merch/${edmerch.merchID}`, edmerch);
+        context.commit("setPostData", res.data)
+        console.log(res.data);
+      }catch(e) {
+        console.log(err);
+      }
+    },
+    async ConfirmEditUser(context, eduser) {
+      try {
+        const res = await axios.patch(`${Api}user/${eduser.userID}`, eduser);
+        context.commit("setPostData", res.data)
+        console.log(res.data);
+      }catch(e) {
+        console.log(err);
+      }
     }
   },
   modules: {},

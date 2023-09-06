@@ -52,6 +52,18 @@ const routes = [
     name: 'cart',
     props: true,
     component: () => import('../views/cartView.vue')
+  },
+  {
+    path: '/editM/:id',
+    name: 'editM',
+    props: true,
+    component: () => import('../views/EditMView.vue'),
+  },
+  {
+    path: '/editU/:id',
+    name: 'editU',
+    props: true,
+    component: () => import('../views/EditUView.vue'),
   }
 ]
 

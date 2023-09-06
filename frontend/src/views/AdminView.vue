@@ -1,7 +1,7 @@
 <template>
     <div>
         <navBarComp />
-        <h1>Admin</h1>
+        <h1 class="admin-title">Admin</h1>
         <merchAdminComp />
         <userAdminComp />
         <footerComp />
