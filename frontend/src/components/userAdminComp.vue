@@ -35,7 +35,7 @@
                 <input class="model-input" v-model="userAdd.emailAdd" type="text" placeholder="Email" />
                 <input class="model-input" v-model="userAdd.userPass" type="text" placeholder="Password" />
                 <input class="model-input" v-model="userAdd.userProfile" type="text" placeholder="Profile Image" />
-                <button class="Add-btn" type="submit">Add</button>
+                <button @click="reloader" class="Add-btn" type="submit">Add</button>
                 <button
                   @click="reloader"
                   type="button"
@@ -66,7 +66,7 @@
           </thead>
           <tbody v-for="user in users" :key="user.userID">
             <tr>
-              <td>{{ user.userID }}</td>
+              <td>#{{ user.userID }}</td>
               <td>{{ user.firstName }}</td>
               <td>{{ user.lastName }}</td>
               <td>{{ user.userAge }}</td>

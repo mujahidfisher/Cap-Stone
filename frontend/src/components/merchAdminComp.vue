@@ -57,7 +57,7 @@
                   type="number"
                   placeholder="Price"
                 />
-                <button class="Add-btn" type="submit">Add</button>
+                <button @click="reloader" class="Add-btn" type="submit">Add</button>
                 <button
                   @click="reloader"
                   type="button"
