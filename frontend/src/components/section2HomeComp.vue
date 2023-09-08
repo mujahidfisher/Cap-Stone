@@ -32,7 +32,7 @@
       </div>
     </div>
     <div class="disco-btn">
-      <button class="disco">Discover</button>
+      <router-link to="/merch"><button class="disco">Discover</button></router-link>
     </div>
   </div>
 </template>

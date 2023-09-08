@@ -330,8 +330,8 @@ nav a.router-link-exact-active {
 }
 
 .explore-btn {
-  width: 85px;
-  height: 50px;
+  width: 80px;
+  height: 70px;
   border-radius: 10px;
   box-shadow: #a89a00 0px 10px;
   transition: 500ms;
@@ -474,8 +474,7 @@ nav a.router-link-exact-active {
 .offer {
   text-align: center;
   color: #ffffff;
-  background-color: #373737;
-  box-shadow: 10px 10px 10px #ffffff;
+  box-shadow: 0px 0px 20px #ffffff;
   border-radius: 20px;
   border: 2px black solid;
   margin: auto;
@@ -1192,4 +1191,54 @@ textarea:required:invalid:focus {
 
 .loginimg {
   width: 3rem;
+}
+
+.ftprod {
+  display: flex;
+  justify-content: space-evenly;
+}
+
+@media only screen and (width < 1000px) {
+  .ftprod {
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+  }
+}
+
+.card-img-top {
+  width: 18rem !important;
+  height: 20rem !important;
+}
+
+.arrow {
+  height: 2rem;
+  width: 3rem;
+}
+
+/* .singleImg {
+  height: 100vh;
+  display: flex;
+  flex-direction: row-reverse
+}
+
+@media only screen and (width < 525px) {
+  .singleImg {
+    height: 50vh;
+  }
+}
+
+.info {
+  display: flex;
+  flex-direction: column;
+} */
+
+.singleTitle {
+  font-size: 28px;
+  font-weight: 700;
+  margin-bottom: 5px;
+}
+
+.price {
+  margin-bottom: 10px;
 }

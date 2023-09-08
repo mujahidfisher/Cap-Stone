@@ -10,25 +10,27 @@
       passions and immerse us in the enchanting worlds we adore.
     </p>
     <div class="container-fluid">
-      <div
+      <div class="ftprod">
+
+        <div
         class="card"
         v-for="merch in limitedProducts"
         style="width: 18rem"
         :key="merch.merchID"
       >
-        <img :src="merch.merchImg" class="card-img-top" alt="merchImg" loading="lazy"/>
+        <img :src="merch.merchImg" class="card-img-top img-fluid" alt="merchImg" loading="lazy"/>
         <div class="card-body text-center">
           <h5 class="card-header">{{ merch.merchName }}</h5>
           <p class="card-header">{{ merch.tag }}</p>
           <p class="card-header">R {{ merch.price }}</p>
           <router-link class="card-header"
-            :to="{
-              name: 'single',
-              params: { id: merch.merchID },
-              query: {
-                name: merch.merchName,
-                tag: merch.tag,
-                img: merch.merchImg,
+          :to="{
+            name: 'single',
+            params: { id: merch.merchID },
+            query: {
+              name: merch.merchName,
+              tag: merch.tag,
+              img: merch.merchImg,
                 price: merch.price,
               },
             }"
@@ -36,6 +38,7 @@
           >
         </div>
       </div>
+    </div>
     </div>
   </div>
 </template>
