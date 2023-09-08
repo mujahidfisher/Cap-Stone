@@ -1,5 +1,6 @@
 <template>
   <div>
+
     <nav class="navbar sticky-top navbar-expand-lg bg-body-tertiary">
       <div class="container-fluid nav">
         <a class="navbar-brand" href="#">
@@ -19,7 +20,7 @@
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
           <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
             <li class="nav-item active">
-              <router-link to="/" class="nav-link ">Home</router-link>
+              <router-link to="/home" class="nav-link ">Home</router-link>
             </li>
             <li class="nav-item">
               <router-link to="/about" class="nav-link">About</router-link>
@@ -37,7 +38,7 @@
               <router-link to="/contact" class="nav-link">Contact Me</router-link>
             </li>
             <li>
-                <router-link to="/logIn"><button class="log-btn"><img src="" alt="login">LogIn</button></router-link>
+                <router-link to="/"><button class="log-btn"><img class="loginimg" src="https://i.postimg.cc/ncdhjwZd/pngtree-user-icon-isolated-on-abstract-background-png-image-5192004-removebg-preview.png" alt="login"></button></router-link>
             </li>
           </ul>
         </div>
@@ -48,6 +49,9 @@
 
 <script>
 export default {
+  methods: {
+
+  }
   
 };
 </script>
