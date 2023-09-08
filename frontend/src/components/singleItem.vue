@@ -1,31 +1,49 @@
 <template>
   <div>
-    <h1>single page</h1>
-    <h2>{{ $route.query.name }}</h2>
-    <div class="card text-center">
-      <div class="card-header">
-        <img
-          :src="$route.query.img"
-          class="card-img-top"
-          :alt="$route.query.img"
-          style="width: 18rem" loading="lazy"
-        />
-      </div>
-      <p class="card-text">
-        <span>{{ $route.query.tag }}</span>
-      </p>
-      <p class="card-text">
-        <span> £{{ $route.query.price }}</span>
-      </p>
+    <div class="ImgSingle">
+      <img :src="$route.query.img" :alt="$route.query.img" loading="lazy" />
+    </div>
 
-      <div class="card-footer text-body-secondary">
-        <router-link to="/merch" class="btn btn-primary">Back</router-link>
+    <div class="col">
+      <div class="col">
+        <div class="thumbnail-container">
+          <img
+            class="drift-demo-trigger"
+            :data-zoom="$route.query.img"
+            :src="$route.query.img"
+          />
+        </div>
+      </div>
+
+      <div class="col">
+        <div class="details">
+          <h1 class="singleTitle">{{ $route.query.name }}</h1>
+          <p class="price">R{{ $route.query.price }}</p>
+          <p class="tag">{{ $route.query.tag }}</p>
+        </div>
       </div>
     </div>
-    >
-    <router-link to="/cart"><button>view cart</button></router-link>
   </div>
-  
+  <!-- <div>
+    <div class="singImg">
+      <div>
+        <img
+          :src="$route.query.img"
+          class="singleImg img-fluid"
+          :alt="$route.query.img"
+          loading="lazy"
+        />
+      </div>
+      <div>
+        <router-link to="/merch" class="mainBack">Back</router-link>
+      </div>
+      <div class="info">
+        <h2>{{ $route.query.name }}</h2>
+        <h4>{{ $route.query.tag }}</h4>
+        <h4>R{{ $route.query.price }}</h4>
+      </div>
+    </div>
+  </div> -->
 </template>
 
 <script>
