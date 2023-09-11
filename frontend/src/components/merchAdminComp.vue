@@ -113,9 +113,6 @@
 
 <script>
 export default {
-  components: {
-    loadingComp,
-  },
   data() {
     return {
       merchAdd: {
