@@ -96,8 +96,12 @@
               <td>{{ merch.tag }}</td>
               <td>R{{ merch.price }}</td>
               <td>
-                <router-link :to="{ name: 'editM', params: { id: merch.merchID } }"><button class="editer">Edit</button></router-link>
-                <button class="deleter" @click="confirmDeleteM(merch.merchID)">Delete</button>
+                <router-link :to="{ name: 'editM', params: { id: merch.merchID } }"
+                  ><button class="editer">Edit</button></router-link
+                >
+                <button class="deleter" @click="confirmDeleteM(merch.merchID)">
+                  Delete
+                </button>
               </td>
             </tr>
           </tbody>
@@ -109,6 +113,9 @@
 
 <script>
 export default {
+  components: {
+    loadingComp,
+  },
   data() {
     return {
       merchAdd: {

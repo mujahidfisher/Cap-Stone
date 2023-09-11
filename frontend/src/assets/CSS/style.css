@@ -507,6 +507,18 @@ nav a.router-link-exact-active {
   background-image: linear-gradient(to right, #373737, black);
 }
 
+.cart {
+  background-image: linear-gradient(to right, #a89a00, #373737);
+  color: #ffffff;
+  border-radius: 20px;
+  width: 6rem;
+  height: 2rem;
+}
+
+.cart:hover {
+  background-image: linear-gradient(to right, #373737, #a89a00);
+}
+
 .animeLog {
   width: 15rem;
 }
@@ -1198,6 +1210,16 @@ textarea:required:invalid:focus {
   justify-content: space-evenly;
 }
 
+.merch-items {
+  display: flex;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
+}
+
+.card {
+  margin: 20px;
+}
+
 @media only screen and (width < 1000px) {
   .ftprod {
     display: flex;
@@ -1214,6 +1236,10 @@ textarea:required:invalid:focus {
 .arrow {
   height: 2rem;
   width: 3rem;
+}
+
+.view {
+  margin: 10px;
 }
 
 /* .singleImg {
@@ -1241,4 +1267,50 @@ textarea:required:invalid:focus {
 
 .price {
   margin-bottom: 10px;
+}
+
+.sort {
+  display: flex;
+  justify-content: space-evenly
+}
+
+.price-sort {
+  padding: 5px;
+  border: 2px #a89a00 solid;
+  background-color: #373737;
+  color: #ffffff;
+  border-radius: 10px;
+  margin: 10px;
+}
+
+.price-sort:hover {
+  outline: #101010;
+  border: 2px #373737 solid;
+  background-color: #a89a00;
+}
+
+.price-sort:focus {
+  background-color: #101010;
+  box-shadow: #a89a00 1px 1px 10px;
+}
+
+.cartview {
+  display: flex;
+  justify-content: center;
+}
+
+.cartImg {
+  width: 20px;
+  margin: 2px;
+}
+
+.loadingcomp {
+  display: flex;
+  justify-content: center;
+}
+
+.loadings {
+  width: 10rem;
+  margin-top: 10rem;
+  margin-bottom: 10rem;
 }
