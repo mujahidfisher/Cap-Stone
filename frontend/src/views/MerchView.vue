@@ -1,9 +1,10 @@
 <template>
     <div>
         <navBarComp />
-        <h1>Merchandise Page</h1>
         <filterComp />
-        <cardComp />
+        <div class="merchItems">
+            <cardComp />
+        </div>
         <footerComp />
     </div>
 </template>

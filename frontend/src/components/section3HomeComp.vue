@@ -10,8 +10,7 @@
       passions and immerse us in the enchanting worlds we adore.
     </p>
     <div class="container-fluid">
-      <div class="ftprod">
-
+      <div class="ftprod" v-if="merchs">
         <div
         class="card"
         v-for="merch in limitedProducts"
@@ -39,12 +38,19 @@
         </div>
       </div>
     </div>
+    <div v-else>
+      <loadingComp />
     </div>
   </div>
+</div>
 </template>
 
 <script>
+import loadingComp from './loadingComp.vue';
 export default {
+  components: {
+    loadingComp
+  },
   computed: {
     merchs() {
       return this.$store.state.merchs;
