@@ -79,6 +79,14 @@ export default createStore({
         context.commit("setMsg", "An Error has occured😒");
       }
     },
+    // async fetchUser(context) {
+    //   try {
+    //     const { data } = await axios.get(`${Api}user`);
+    //     context.commit("setUser", data.results);
+    //   } catch (e) {
+    //     context.commit("setMsg", "An Error has occured😒");
+    //   }
+    // },
     async deleteUser(context, userID) {
       try {
         const { data } = await axios.delete(`${Api}user/${userID}`);
@@ -158,7 +166,8 @@ export default createStore({
           await axios.post(`${Api}login`, payload)
         ).data;
         if (result) {
-          context.commit(`setUsers`, { result, msg });
+          context.commit(`setUser`, { result, msg });
+          localStorage.setItem("user", JSON.stringify(result))
           cookies.set("LegitUser", { token, msg, result });
           authUser.applyToken(token);
           sweet({
@@ -196,9 +205,11 @@ export default createStore({
         context.commit("setMsg", "An Error has occured😒");
       }
     },
-    // async FilterDefault(context {
-
-    // })
+    Logout(context) {
+      context.commit("setUser")
+      cookies.remove("LegitUser")
+      localStorage.removeItem('user');
+    }
   },
   modules: {},
 });

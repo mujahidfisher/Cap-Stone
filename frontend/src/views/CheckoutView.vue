@@ -1,7 +1,7 @@
 <template>
-    <div>
+    <div class="pagehieght">
         <navBarComp />
-        <h1>Checkout</h1>
+        <h1 class="checkout-head">Checkout</h1>
         <checkoutTableComp />
         <footerComp />
     </div>
