@@ -68,13 +68,14 @@ export default {
     return {
       merch: [],
       cart: [],
-      tagFilter: null,
+      tagFilter: [],
     };
   },
   methods: {
     addToCart(merch) {
       this.cart.push(merch);
       console.log(this.cart);
+      localStorage.setItem("cart", JSON.stringify(this.cart))
     },
       FilterMerchBy(tag) {
         this.tagFilter = tag;

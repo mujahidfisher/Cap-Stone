@@ -64,6 +64,12 @@ const routes = [
     name: 'editU',
     props: true,
     component: () => import('../views/EditUView.vue'),
+  },
+  {
+    path: '/singleU',
+    name: 'singleU',
+    props: true,
+    component: () => import('../views/SingleUserView.vue'),
   }
 ]
 
