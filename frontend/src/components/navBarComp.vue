@@ -36,19 +36,22 @@
               <router-link to="/checkout" class="nav-link">Checkout</router-link>
             </li>
             <li class="nav-item">
-              <router-link to="/admin" class="nav-link">Admin</router-link>
+              <router-link to="/admin" v-show="imAdmin" class="nav-link"
+                >Admin</router-link
+              >
             </li>
             <li class="nav-item">
               <router-link to="/contact" class="nav-link">Contact Me</router-link>
             </li>
             <li>
-              <router-link to="/singleU"><button class="log-btn">
-                <img
-                  class="loginimg"
-                  src="https://i.postimg.cc/ncdhjwZd/pngtree-user-icon-isolated-on-abstract-background-png-image-5192004-removebg-preview.png"
-                  alt="login"
-                /></button
-            ></router-link>
+              <router-link to="/singleU"
+                ><button class="log-btn">
+                  <img
+                    class="loginimg"
+                    src="https://i.postimg.cc/ncdhjwZd/pngtree-user-icon-isolated-on-abstract-background-png-image-5192004-removebg-preview.png"
+                    alt="login"
+                  /></button
+              ></router-link>
             </li>
           </ul>
         </div>
@@ -58,7 +61,20 @@
 </template>
 
 <script>
+import { useCookies } from "vue3-cookies";
+const { cookies } = useCookies();
 export default {
+  computed: {
+    user() {
+      return this.$store.state.user || cookies.get("LegitUser");
+    },
+    result() {
+      return this.user?.result;
+    },
+    imAdmin() {
+      return this.result?.userRole?.toLowerCase() === "admin";
+    },
+  },
 };
 </script>
 
