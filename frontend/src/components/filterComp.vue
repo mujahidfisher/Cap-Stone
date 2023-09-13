@@ -1,14 +1,5 @@
 <template>
   <div>
-    <form class="d-flex" role="search">
-      <input
-        class="form-control me-2 searchbar"
-        type="search"
-        placeholder="Search"
-        aria-label="Search"
-      />
-      <button class="AddMerch" type="submit">Search</button>
-    </form>
     <div class="btn-group">
       <div class="sort">
         <button @click="Default" class="price-sort">Default</button>
