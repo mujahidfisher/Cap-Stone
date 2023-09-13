@@ -1,5 +1,14 @@
 <template>
   <div class="container-fluid">
+    <form class="d-flex" role="search">
+      <input
+        class="form-control me-2"
+        type="search"
+        placeholder="Search"
+        aria-label="Search"
+        v-model="searchInput"
+      />
+    </form>
     <button
       type="button"
       class="price-sort dropdown-toggle"
@@ -28,7 +37,9 @@
     <div class="merch-items" v-if="merchs">
       <div
         class="card"
-        v-for="merch in FilterMerch"
+        v-for="merch in [...this.FilteredProducts, ...this.FilterMerch]"
+        @click="focused = true"
+        @blur="focused = false"
         style="width: 18rem"
         :key="merch.merchID"
       >
@@ -69,30 +80,47 @@ export default {
       merch: [],
       cart: [],
       tagFilter: [],
+      searchInput: "",
+      focused: true,
     };
   },
   methods: {
     addToCart(merch) {
       this.cart.push(merch);
       console.log(this.cart);
-      localStorage.setItem("cart", JSON.stringify(this.cart))
+      localStorage.setItem("cart", JSON.stringify(this.cart));
     },
-      FilterMerchBy(tag) {
-        this.tagFilter = tag;
-      },
-      DefaultFilter() {
-        this.tagFilter = ""
-      }
+    FilterMerchBy(tag) {
+      this.tagFilter = tag;
+    },
+    DefaultFilter() {
+      this.tagFilter = "";
+    },
+    FilterProducts() {
+      const searchQuery = this.searchInput.toLowerCase();
+      return this.$store.state.merchs.filter((merch) => {
+        const itemName = merch.merchName.toLowerCase();
+        return itemName.includes(searchQuery);
+      });
+    },
   },
   computed: {
+    merchs() {
+      return this.$store.state.merchs;
+    },
     FilterMerch() {
       if (!this.tagFilter) {
         return this.merchs;
       }
       return this.merchs.filter((fitermerch) => fitermerch.tag.includes(this.tagFilter));
     },
-    merchs() {
-      return this.$store.state.merchs;
+
+    FilteredProducts() {
+      if (this.focused && this.searchInput) {
+        return this.FilterProducts();
+      } else {
+        return [];
+      }
     },
   },
   mounted() {
