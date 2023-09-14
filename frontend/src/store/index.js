@@ -18,8 +18,7 @@ export default createStore({
     msg: null,
     postData: null,
   },
-  getters: {
-  },
+  getters: {},
   mutations: {
     setUsers(state, users) {
       state.users = users;
@@ -79,14 +78,6 @@ export default createStore({
         context.commit("setMsg", "An Error has occured😒");
       }
     },
-    // async fetchUser(context) {
-    //   try {
-    //     const { data } = await axios.get(`${Api}user`);
-    //     context.commit("setUser", data.results);
-    //   } catch (e) {
-    //     context.commit("setMsg", "An Error has occured😒");
-    //   }
-    // },
     async deleteUser(context, userID) {
       try {
         const { data } = await axios.delete(`${Api}user/${userID}`);
@@ -103,7 +94,7 @@ export default createStore({
         commit("setPostData", res.data);
         console.log(res.data);
       } catch (e) {
-        console.log("nothing much");
+        commit("setMsg", "An error occurred.");
       }
     },
     async ConfirmAddUser({ commit }, userAdd) {
@@ -112,7 +103,7 @@ export default createStore({
         commit("setPostData", res.data);
         console.log(res.data);
       } catch (e) {
-        console.log("nothing much");
+        commit("setMsg", "An error occurred.");
       }
     },
     async ConfirmEditMerch(context, edmerch) {
@@ -124,7 +115,7 @@ export default createStore({
         context.commit("setPostData", res.data);
         console.log(res.data);
       } catch (e) {
-        console.log(err);
+        context.commit("setMsg", "An error occurred.");
       }
     },
     async ConfirmEditUser(context, eduser) {
@@ -133,7 +124,7 @@ export default createStore({
         context.commit("setPostData", res.data);
         console.log(res.data);
       } catch (e) {
-        console.log(err);
+        context.commit("setMsg", "An error occurred.");
       }
     },
     async Register(context, payload) {
@@ -157,7 +148,7 @@ export default createStore({
           });
         }
       } catch (e) {
-        console.log(e);
+        context.commit("setMsg", "An error occurred.");
       }
     },
     async LoginUser(context, payload) {
@@ -167,7 +158,7 @@ export default createStore({
         ).data;
         if (result) {
           context.commit(`setUser`, { result, msg });
-          localStorage.setItem("user", JSON.stringify(result))
+          localStorage.setItem("user", JSON.stringify(result));
           cookies.set("LegitUser", { token, msg, result });
           authUser.applyToken(token);
           sweet({
@@ -186,7 +177,7 @@ export default createStore({
           });
         }
       } catch (e) {
-        console.log(e);
+        context.commit("setMsg", "An error occurred.");
       }
     },
     async FilterName(context) {
@@ -206,10 +197,14 @@ export default createStore({
       }
     },
     Logout(context) {
-      context.commit("setUser")
-      cookies.remove("LegitUser")
-      localStorage.removeItem('user');
-    }
+      try {
+        context.commit("setUser");
+        cookies.remove("LegitUser");
+        localStorage.removeItem("user");
+      } catch (e) {
+        context.commit("setMsg", "An error occurred.");
+      }
+    },
   },
   modules: {},
 });

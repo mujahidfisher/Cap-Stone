@@ -630,7 +630,6 @@ nav a.router-link-exact-active {
   .rights {
     margin-left: 2rem !important;
   }
-  
 }
 
 @media only screen and (width < 590px) {
@@ -736,7 +735,7 @@ nav a.router-link-exact-active {
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   animation: textclip 2s linear infinite;
-  padding: 10px
+  padding: 10px;
 }
 
 @keyframes textclip {
@@ -802,7 +801,6 @@ nav a.router-link-exact-active {
   .rights {
     margin-left: 5rem !important;
   }
-  
 }
 
 @media only screen and (width < 1239px) {
@@ -834,7 +832,6 @@ nav a.router-link-exact-active {
   color: #ffffff8f;
   margin-left: 20rem;
 }
-
 
 .icons {
   width: 3rem;
@@ -1006,16 +1003,16 @@ textarea:required:invalid:focus {
   text-align: center;
   position: relative;
   border-radius: 20px;
-  transition: all .35s;
+  transition: all 0.35s;
   margin-left: 2rem;
 }
 
-.btn-submit-log span{
+.btn-submit-log span {
   position: relative;
   z-index: 2;
 }
 
-.btn-submit-log:after{
+.btn-submit-log:after {
   position: absolute;
   content: "";
   top: 0;
@@ -1026,12 +1023,12 @@ textarea:required:invalid:focus {
   transition: all 0.5s;
 }
 
-.btn-submit-log:hover{
+.btn-submit-log:hover {
   color: #ffffff;
   border-radius: 20px;
 }
 
-.btn-submit-log:hover:after{
+.btn-submit-log:hover:after {
   width: 100%;
   border-radius: 20px;
 }
@@ -1042,7 +1039,6 @@ textarea:required:invalid:focus {
   border: none;
   border-radius: 20px;
   text-align: center;
-
 }
 
 .AddMerch,
@@ -1066,16 +1062,22 @@ textarea:required:invalid:focus {
   --slice-3: inset(10% -6px 85% 0);
   --slice-4: inset(40% -6px 43% 0);
   --slice-5: inset(80% -6px 5% 0);
-  
-  content: 'Add Merch';
+
+  content: "Add Merch";
   display: block;
   position: absolute;
   top: 0;
   left: 0;
   right: 0;
   bottom: 0;
-  background: linear-gradient(45deg, transparent 3%, #00E6F6 3%, #00E6F6 5%, #FF013C 5%);
-  text-shadow: -3px -3px 0px #a89a00, 3px 3px 0px #00E6F6;
+  background: linear-gradient(
+    45deg,
+    transparent 3%,
+    #00e6f6 3%,
+    #00e6f6 5%,
+    #ff013c 5%
+  );
+  text-shadow: -3px -3px 0px #a89a00, 3px 3px 0px #00e6f6;
   clip-path: var(--slice-0);
 }
 
@@ -1276,7 +1278,7 @@ textarea:required:invalid:focus {
 
 .sort {
   display: flex;
-  justify-content: space-evenly
+  justify-content: space-evenly;
 }
 
 .price-sort {
@@ -1315,7 +1317,7 @@ textarea:required:invalid:focus {
 }
 
 .loadings {
-  width: 10rem;
+  width: 15rem;
   margin-top: 10rem;
   margin-bottom: 10rem;
 }
@@ -1430,7 +1432,9 @@ textarea:required:invalid:focus {
   background-color: #a89a00;
 }
 
-.clear-btn:hover, .logout-btn:hover, .back-btn:hover {
+.clear-btn:hover,
+.logout-btn:hover,
+.back-btn:hover {
   background-color: red;
   color: #101010;
 }
