@@ -35,6 +35,16 @@
 
 <script>
     export default {
+      created() {
+        const saveUser = localStorage.getItem("user")
+        if (saveUser) {
+            this.user = JSON.parse(saveUser)
+        }
+        const data = JSON.parse(localStorage.getItem("user"))
+        if (data) {
+            this.$store.commit("setUser", data)
+        }
+    },
         
     }
 </script>

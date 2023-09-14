@@ -71,6 +71,11 @@ const routes = [
     name: 'singleU',
     props: true,
     component: () => import('../views/SingleUserView.vue'),
+  },
+  {
+    path: '/orders',
+    name: 'orders',
+    component: () => import('../views/OrdersView.vue')
   }
 ]
 

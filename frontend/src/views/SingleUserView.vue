@@ -8,6 +8,7 @@
         <h3 class="singleTitle">{{ $store.state.user?.emailAdd }}</h3>
         <router-link to="/editU/:id"><button class="btn btn-outline-warning">Edit</button></router-link>
         <button @click="logOut" class="logout-btn">Log Out</button>
+        <router-link to="/orders"><button class="btn btn-outline-warning" style="margin-top: 20px">View Orders</button></router-link>
         <router-link class="btn btn-outline-warning" style="margin-top: 20px" to="/">Login</router-link>
         <router-link class="back-btn" to="/home">Back</router-link>
       </div>

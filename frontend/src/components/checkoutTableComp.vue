@@ -22,7 +22,7 @@
             <td>R{{ item.price }}</td>
             <td>
               <button @click="deleteSingle(index)" class="deleter">Remove</button>
-              <button class="editer">Purchase</button>
+              <button @click="order" class="editer">Purchase</button>
             </td>
           </tr>
         </tbody>
@@ -33,6 +33,11 @@
 
 <script>
 export default {
+  data() {
+    return {
+      cart: [],
+    }
+  },
   computed: {
     cart() {
       const cart = JSON.parse(localStorage.getItem("cart"));
@@ -42,10 +47,19 @@ export default {
       localStorage.removeItem("cart");
       location.reload();
     },
+    order() {
+      sweetAlert("Order has been placed! your order with arrive in 5-7 working days!");
+    },
+  },
+  methods: {
     deleteSingle(index) {
-      JSON.parse(localStorage.getItem("cart"));
-      this.cart.splice(index, 1);
-      JSON.stringify(localStorage.setItem(this.cart));
+      const cart = JSON.parse(localStorage.getItem("cart")) || [];
+      if (index >= 0 && index < cart.length) {
+        cart.splice(index, 1);
+        localStorage.setItem("cart", JSON.stringify(cart));
+        this.cart = cart;
+      }
+      location.reload()
     },
   },
 };
