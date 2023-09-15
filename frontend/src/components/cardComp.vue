@@ -92,6 +92,7 @@ export default {
     },
     FilterMerchBy(tag) {
       this.tagFilter = tag;
+      console.log(this.tagFilter);
     },
     DefaultFilter() {
       this.tagFilter = "";
@@ -114,7 +115,6 @@ export default {
       }
       return this.merchs.filter((fitermerch) => fitermerch.tag.includes(this.tagFilter));
     },
-
     FilteredProducts() {
       if (this.focused && this.searchInput) {
         return this.FilterProducts();
