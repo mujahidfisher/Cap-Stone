@@ -1453,3 +1453,23 @@ textarea:required:invalid:focus {
 .pagehieght {
   height: 260vh;
 }
+
+.priceTot {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  border: 2px #a89a00 solid;
+  padding: 5px;
+  margin: 10px;
+}
+
+.total {
+  text-shadow: 1px 1px 10px #ffffff;
+  color: #ffffff;
+  margin: 10px;
+}
+
+.amount {
+  color: #a89a00;
+}

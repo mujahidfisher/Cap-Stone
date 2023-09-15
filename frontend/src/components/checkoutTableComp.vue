@@ -28,6 +28,10 @@
         </tbody>
       </table>
     </div>
+    <div class="priceTot">
+      <h4 class="total">Total Amount:</h4>
+      <h6 class="amount">R{{ totalAmount }}</h6>
+    </div>
   </div>
 </template>
 
@@ -36,7 +40,7 @@ export default {
   data() {
     return {
       cart: [],
-    }
+    };
   },
   computed: {
     cart() {
@@ -48,7 +52,16 @@ export default {
       location.reload();
     },
     order() {
-      sweetAlert("Order has been placed! your order with arrive in 5-7 working days!");
+      sweetAlert("Order has been placed! Your order with arrive in 5-7 working days!");
+    },
+    totalAmount() {
+      let total = 0;
+      if (this.cart && this.cart.length > 0) {
+        for (const item of this.cart) {
+          total += item.price;
+        }
+      }
+      return total;
     },
   },
   methods: {
@@ -59,7 +72,7 @@ export default {
         localStorage.setItem("cart", JSON.stringify(cart));
         this.cart = cart;
       }
-      location.reload()
+      location.reload();
     },
   },
 };
