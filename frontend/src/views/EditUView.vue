@@ -10,7 +10,7 @@
         <input class="model-input" v-model="eduser.emailAdd" type="text" placeholder="Email" />
         <input class="model-input" v-model="eduser.userPass" type="text" placeholder="Password" />
         <input class="model-input" v-model="eduser.userProfile" type="text" placeholder="Profile Image" />
-      <button class="explore-btn" type="submit">Save</button>
+      <button @click="Save" class="explore-btn" type="submit">Save</button>
     </form>
   </div>
 </template>
@@ -35,6 +35,11 @@ export default {
   methods: {
     EditUser() {
       this.$store.dispatch("ConfirmEditUser", this.eduser)
+    }
+  },
+  computed: {
+    Save() {
+      sweetAlert("Updated has been saved")
     }
   }
 };

@@ -28,7 +28,7 @@
           type="number"
           placeholder="Price"
         />
-        <button class="explore-btn" type="submit">Save</button>
+        <button @click="Save" class="explore-btn" type="submit">Save</button>
       </form>
     </div>
 </template>
@@ -51,6 +51,11 @@ export default {
   methods: {
     EditMerch() {
       this.$store.dispatch("ConfirmEditMerch", this.edmerch)
+    }
+  },
+  computed: {
+    Save() {
+      sweetAlert("Updated has been saved")
     }
   }
 };
