@@ -11,7 +11,7 @@
 }
 
 #app {
-  background-image: url("https://i.postimg.cc/CLTXjJs5/57fd02f833f0c5b906f5032b0f2314dc.jpg");
+  background-image: url("");
   background-repeat: no-repeat;
   background-attachment: fixed;
   background-size: 100% 100%;
@@ -277,7 +277,7 @@ nav a.router-link-exact-active {
     margin-left: 5vh;
   }
   #app {
-    background-image: url("https://i.postimg.cc/Znc9vx3y/57fd02f833f0c5b906f5032b0f2314dc.jpg");
+    background-image: url("");
     background-repeat: no-repeat;
     background-attachment: fixed;
     background-size: 100% 100%;
@@ -303,7 +303,7 @@ nav a.router-link-exact-active {
 
 @media only screen and (width < 650px) {
   #app {
-    background-image: url("https://i.postimg.cc/Dzr7zy1S/57fd02f833f0c5b906f5032b0f2314dc.jpg");
+    background-image: url("");
     background-repeat: no-repeat;
     background-attachment: fixed;
     background-size: 100% 100%;
@@ -346,7 +346,7 @@ nav a.router-link-exact-active {
 
 @media only screen and (width < 430px) {
   #app {
-    background-image: url("https://i.postimg.cc/YSCwtf2s/57fd02f833f0c5b906f5032b0f2314dc.jpg");
+    background-image: url("");
     background-repeat: no-repeat;
     background-attachment: fixed;
     background-size: 100% 100%;
